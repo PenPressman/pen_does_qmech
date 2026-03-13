@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>QM Visualizer — Quantum Mechanics Interactive Applets</title>
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="logo">QM<span>Viz</span></a>
+      <nav>
+        <a href="#applets">Applets</a>
+        <a href="https://github.com/YOUR_USERNAME/qm-visualizer" target="_blank" class="btn-gh">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
+          GitHub
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-bg">
+        <canvas id="hero-canvas"></canvas>
+      </div>
+      <div class="hero-content">
+        <div class="hero-tag">Following Griffiths • Introduction to Quantum Mechanics</div>
+        <h1>Quantum Mechanics<br><em>Visualized</em></h1>
+        <p class="hero-sub">Seven interactive applets covering the core of QM — wave packets, harmonic oscillators, tunneling, hydrogen orbitals, and spin. Built for undergrad physics students.</p>
+        <a href="#applets" class="cta">Explore Applets</a>
+      </div>
+    </section>
+
+    <section class="applets" id="applets">
+      <div class="section-label">The Applets</div>
+      <div class="applet-grid">
+
+        <a href="applets/double-slit.html" class="applet-card">
+          <div class="card-chapter">Ch. 1</div>
+          <div class="card-vis" id="vis-1"></div>
+          <div class="card-body">
+            <h2>Double-Slit Experiment</h2>
+            <p>Wave-particle duality. Interference patterns. The which-way measurement that destroys the pattern.</p>
+            <div class="card-tags">
+              <span>Wave-particle duality</span>
+              <span>Measurement</span>
+              <span>Interference</span>
+            </div>
+          </div>
+        </a>
+
+        <a href="applets/wave-packet.html" class="applet-card">
+          <div class="card-chapter">Ch. 1–2</div>
+          <div class="card-vis" id="vis-2"></div>
+          <div class="card-body">
+            <h2>Wave Packets &amp; the TDSE</h2>
+            <p>Time-dependent Schrödinger equation. Gaussian wave packets spreading in time. Heisenberg uncertainty tracked live.</p>
+            <div class="card-tags">
+              <span>TDSE</span>
+              <span>Uncertainty</span>
+              <span>Probability current</span>
+            </div>
+          </div>
+        </a>
+
+        <a href="applets/infinite-well.html" class="applet-card">
+          <div class="card-chapter">Ch. 2.2</div>
+          <div class="card-vis" id="vis-3"></div>
+          <div class="card-body">
+            <h2>Infinite Square Well</h2>
+            <p>Stationary states ψₙ. Energy quantization scaling as n². Probability density with nodes.</p>
+            <div class="card-tags">
+              <span>Stationary states</span>
+              <span>Quantization</span>
+              <span>Hermite</span>
+            </div>
+          </div>
+        </a>
+
+        <a href="applets/harmonic-oscillator.html" class="applet-card">
+          <div class="card-chapter">Ch. 2.3</div>
+          <div class="card-vis" id="vis-4"></div>
+          <div class="card-body">
+            <h2>Harmonic Oscillator</h2>
+            <p>Ladder operators â and â⁺. Hermite polynomial eigenstates. Coherent states as minimum-uncertainty wavepackets.</p>
+            <div class="card-tags">
+              <span>Ladder operators</span>
+              <span>Coherent states</span>
+              <span>Hermite</span>
+            </div>
+          </div>
+        </a>
+
+        <a href="applets/finite-well.html" class="applet-card">
+          <div class="card-chapter">Ch. 2.6–2.7</div>
+          <div class="card-vis" id="vis-5"></div>
+          <div class="card-body">
+            <h2>Finite Well &amp; Tunneling</h2>
+            <p>Bound state energies via transcendental equations. Tunneling transmission T(E). Full scattering with R + T = 1.</p>
+            <div class="card-tags">
+              <span>Tunneling</span>
+              <span>Transmission</span>
+              <span>Scattering</span>
+            </div>
+          </div>
+        </a>
+
+        <a href="applets/hydrogen.html" class="applet-card">
+          <div class="card-chapter">Ch. 4.2</div>
+          <div class="card-vis" id="vis-6"></div>
+          <div class="card-body">
+            <h2>Hydrogen Atom</h2>
+            <p>Radial wavefunctions R_nℓ. Spherical harmonics Y_ℓm. Live pixel-rendered orbital probability clouds.</p>
+            <div class="card-tags">
+              <span>Orbitals</span>
+              <span>Laguerre</span>
+              <span>Spherical harmonics</span>
+            </div>
+          </div>
+        </a>
+
+        <a href="applets/spin.html" class="applet-card">
+          <div class="card-chapter">Ch. 4.4</div>
+          <div class="card-vis" id="vis-7"></div>
+          <div class="card-body">
+            <h2>Spin-½ &amp; Bloch Sphere</h2>
+            <p>Spinors on the Bloch sphere. Pauli matrix expectation values. Animated Larmor precession in a magnetic field.</p>
+            <div class="card-tags">
+              <span>Bloch sphere</span>
+              <span>Pauli matrices</span>
+              <span>Precession</span>
+            </div>
+          </div>
+        </a>
+
+      </div>
+    </section>
+
+    <section class="about">
+      <div class="about-inner">
+        <div class="about-text">
+          <h2>About this project</h2>
+          <p>These applets follow the structure of Griffiths' <em>Introduction to Quantum Mechanics</em> (2nd/3rd ed.), the standard undergraduate text. Each applet is self-contained HTML/CSS/JS — no build tools, no dependencies, no framework. Just open in a browser.</p>
+          <p>Physics is computed analytically where possible (exact eigenstates, ladder operators, spherical harmonics via recurrence), and numerically via finite-difference TDSE evolution for the wave packet applet.</p>
+        </div>
+        <div class="about-stack">
+          <div class="stack-label">Built with</div>
+          <ul>
+            <li>Vanilla HTML · CSS · JavaScript</li>
+            <li>Canvas 2D API for rendering</li>
+            <li>Zero build tools or bundlers</li>
+            <li>Zero runtime dependencies</li>
+          </ul>
+          <a href="https://github.com/YOUR_USERNAME/qm-visualizer" class="btn-outline" target="_blank">View on GitHub →</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <span>QM Visualizer — open source</span>
+      <a href="https://github.com/YOUR_USERNAME/qm-visualizer" target="_blank">GitHub</a>
+    </div>
+  </footer>
+
+  <script src="js/hero.js"></script>
+</body>
+</html>
